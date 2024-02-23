@@ -13,4 +13,7 @@ migrationdrop:
 test:
 	go test -v -cover ./...
 
-.PHONY: createdb postgres migrateup migrationdrop test
+server:
+	go run main.go
+
+.PHONY: createdb postgres migrateup migrationdrop test server
