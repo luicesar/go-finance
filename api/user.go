@@ -52,6 +52,7 @@ type getUserRequest struct {
 
 func (server *Server) getUser(ctx *gin.Context) {
 	var req getUserRequest
+	//ShouldBindUri: valida a url
 	err := ctx.ShouldBindUri(&req)
 	if err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
