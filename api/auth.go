@@ -56,6 +56,7 @@ func (server *Server) login(ctx *gin.Context) {
 	}
 
 	expirationTime := time.Now().Add(100 * time.Minute)
+	//fmt.Println("expirationTime: ", expirationTime.String())
 
 	claims := &Claims{
 		Username: req.Username,

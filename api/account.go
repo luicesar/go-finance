@@ -230,6 +230,8 @@ func (server *Server) getAccounts(ctx *gin.Context) {
 		return
 	}
 
+	//fmt.Println("Debugar/Imprimir .... ")
+
 	arg := db.GetAccountsParams{
 		UserID: req.UserID,
 		Type:   req.Type,
